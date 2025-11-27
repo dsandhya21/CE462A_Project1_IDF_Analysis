@@ -117,3 +117,21 @@ To run the project:
 ### **Option 1 — Run in Google Colab**
 Upload all files and run:
 
+
+CE462.ipynb
+---
+
+### **Option 2 — Run Locally**
+
+Install packages:
+
+```bash
+pip install numpy pandas scipy matplotlib openpyxl
+
+
+Run the script:
+python CE462.py
+
+
+
+
