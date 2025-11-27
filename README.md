@@ -29,6 +29,7 @@ Perform KS test and choose best distribution
 Generate IDF curves for return periods:
 2, 5, 10, 15, 30, 50 years
 
+
 📈 Output Plot:
 
 figures/IDF_Curves.png
@@ -44,9 +45,11 @@ Use IDF values → compute total depth
 
 Apply a 6-interval symmetric rainfall pattern
 
+
 📊 Output Plot:
 
 figures/Hyetograph.png
+
 
 
 3️⃣ Basin-wise Peak Discharge (Rational Method)
@@ -67,6 +70,7 @@ Peak discharge:
 Results stored in:
 
 Drainage_Design_Results.xlsx
+
 
 
 4️⃣ Pipe Sizing using Manning’s Formula
@@ -94,6 +98,7 @@ SciPy
 Matplotlib
 OpenPyXL (for Excel output) 
 
+
 ▶️ How to Run
 
 Option 1 — Run in Google Colab
@@ -102,6 +107,7 @@ Just upload all files and run CE462.ipynb
 Option 2 — Run Locally
 pip install numpy pandas scipy matplotlib openpyxl
 python ce462.py
+
 
 📄 Results Summary
 
