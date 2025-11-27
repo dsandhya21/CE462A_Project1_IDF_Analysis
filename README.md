@@ -1,4 +1,4 @@
-# CE462A – Stormwater Drainage Design Project  
+# CE462A – Project1_IDF_Analysis  
 ### IDF Analysis | Hyetograph | Rational Method | Manning’s Formula for Pipe Sizing  
 
 This repository contains the complete implementation of an **urban stormwater drainage design** project completed for **CE462A – Project-02 (Villupuram site)**.
@@ -132,6 +132,18 @@ pip install numpy pandas scipy matplotlib openpyxl
 Run the script:
 python CE462.py
 
+
+📄 Summary of Results
+
+IDF curves generated using best-fit probability distribution
+
+Hyetograph developed for T = 25-year storm
+
+Basin-wise runoff calculated using Rational Method
+
+Pipes sized to safely convey peak flows
+
+All outputs exported to Excel for reporting
 
 
 
