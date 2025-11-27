@@ -88,7 +88,6 @@ Q = \frac{1}{n} A R^{2/3} S^{1/2}
 Upload all files and run:
 
 
----
 
 ### Option 2 — Run Locally
 
@@ -97,20 +96,7 @@ Install packages:
 ```bash
 pip install numpy pandas scipy matplotlib openpyxl
 
-
 python CE462.py
-
-
----
-
-# 🔥 IMPORTANT  
-The key fix is this:
-
-After the line:
-
-
-You MUST close the code block:
-
 
 📄 Summary of Results
 
@@ -123,5 +109,33 @@ Basin-wise runoff calculated using Rational Method
 Pipes sized to safely convey peak flows
 
 All outputs exported to Excel
+
+
+---
+
+# ⚠️ SUPER IMPORTANT
+
+There are **three code blocks**, each opened and closed properly:
+
+### Code block 1 — Install packages  
+
+…
+
+### Code block 2 — Run script  
+
+…
+
+### AFTER that, **normal text begins**, so summary is normal text.
+
+---
+
+# 🎯 WHY YOUR SUMMARY WAS STILL GREY
+
+Because your file probably looks like this:
+
+pip install …
+python CE462.py
+# missing closing backticks here ❌
+
 
 
