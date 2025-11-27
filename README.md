@@ -101,12 +101,13 @@ pip install numpy pandas scipy matplotlib openpyxl
 python CE462.py
 
 
-📄 Summary of Results
+## 📄 Summary of Results
 
-• IDF curves generated using best-fit probability distribution
-• Hyetograph developed for a T = 25-year storm
-• Basin-wise runoff calculated using Rational Method
-• Pipes sized to safely convey peak flows
-• All outputs exported to Excel
+- IDF curves generated using best-fit probability distribution  
+- Hyetograph developed for a **T = 25-year** storm  
+- Basin-wise runoff calculated using Rational Method  
+- Pipes sized to safely convey peak flows  
+- All outputs exported to Excel  
+
 
 
