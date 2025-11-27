@@ -87,7 +87,11 @@ Q = \frac{1}{n} A R^{2/3} S^{1/2}
 ### Option 1 — Google Colab  
 Upload all files and run:
 
+```
+CE462.ipynb
+```
 
+---
 
 ### Option 2 — Run Locally
 
@@ -95,47 +99,21 @@ Install packages:
 
 ```bash
 pip install numpy pandas scipy matplotlib openpyxl
+```
 
+Run the script:
+
+```bash
 python CE462.py
+```
 
-📄 Summary of Results
+## 📄 Summary of Results
 
-IDF curves generated using best-fit probability distribution
-
-Hyetograph developed for a T = 25-year storm
-
-Basin-wise runoff calculated using Rational Method
-
-Pipes sized to safely convey peak flows
-
-All outputs exported to Excel
-
-
----
-
-# ⚠️ SUPER IMPORTANT
-
-There are **three code blocks**, each opened and closed properly:
-
-### Code block 1 — Install packages  
-
-…
-
-### Code block 2 — Run script  
-
-…
-
-### AFTER that, **normal text begins**, so summary is normal text.
-
----
-
-# 🎯 WHY YOUR SUMMARY WAS STILL GREY
-
-Because your file probably looks like this:
-
-pip install …
-python CE462.py
-# missing closing backticks here ❌
+- IDF curves generated using best-fit probability distribution  
+- Hyetograph developed for a **T = 25-year** storm  
+- Basin-wise runoff calculated using Rational Method  
+- Pipes sized to safely convey peak flows  
+- All outputs exported to Excel
 
 
 
