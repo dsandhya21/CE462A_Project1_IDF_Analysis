@@ -1,119 +1,119 @@
-# CE462A_Project1_IDF_Analysis
-Stormwater Drainage | IDF Analysis | Hyetograph | Rational Method | Pipe Sizing using Manning’s Formula
+# CE462A – Stormwater Drainage Design Project  
+### IDF Analysis | Hyetograph | Rational Method | Manning’s Formula for Pipe Sizing  
 
-This repository contains the full implementation of an urban stormwater drainage design project completed for CE462A – Project-02 (Villupuram site).
-The work includes rainfall analysis, IDF curve generation, hyetograph development, peak runoff estimation, and hydraulic design of pipe networks.
+This repository contains the complete implementation of an **urban stormwater drainage design** project completed for **CE462A – Project-02 (Villupuram site)**.
 
-              File                                                Description                                                                     
-  --------------------------------  ------------------------------------------------------------------------------- 
-    CE462.ipynb                      Google Colab notebook containing the complete code, plots, and outputs.         
-    CE462.py                         Python script version of the full workflow.                                     
-    Dataset2.xlsx                    Input rainfall dataset used for IDF analysis.                                   
-    IDF_Results.xlsx                 Computed rainfall intensities for various return periods.                       
-    Drainage_Design_Results.xlsx     Basin-wise discharge + pipe adequacy results.                                   
-    figures                          Folder containing all generated plots (IDF curves, hyetograph, Manning curves). 
-  -------------------------------   ---------------------------------------------------------------------------------
+The work includes:
+- Rainfall statistical analysis  
+- IDF curve generation  
+- Design storm hyetograph development  
+- Basin-wise peak discharge estimation  
+- Hydraulic design of pipe network using Manning’s equation  
 
-📘 Project Overview
+---
 
-This project performs a complete hydrologic + hydraulic simulation for the drainage system design of a residential catchment.
+## 📁 Repository Contents  
 
-1️⃣ IDF Curve Generation
+| File / Folder | Description |
+|---------------|-------------|
+| **CE462.ipynb** | Complete Google Colab notebook with code, plots, analysis & outputs. |
+| **CE462.py** | Python script version of the full workflow. |
+| **Dataset2.xlsx** | Input rainfall dataset used for IDF analysis. |
+| **IDF_Results.xlsx** | Computed rainfall intensities for all return periods. |
+| **Drainage_Design_Results.xlsx** | Basin discharge + pipe adequacy results. |
+| **/figures** | Folder containing all generated plots. |
 
-Extract rainfall values from Dataset2.xlsx
+**Figures included:**
+- `IDF_Curves.png`  
+- `Hyetograph.png`  
+- `Manning_Capacity_vs_Diameter.png`
 
-Fit Lognormal and Gumbel distributions
+---
 
-Perform KS test and choose best distribution
+## 📘 Project Overview  
 
-Generate IDF curves for return periods:
-2, 5, 10, 15, 30, 50 years
+This project performs a **complete hydrologic + hydraulic simulation** for a drainage system in a residential catchment.
 
+---
 
-📈 Output Plot:
+### **1️⃣ IDF Curve Generation**
 
-figures/IDF_Curves.png
+Steps performed:
+- Extract rainfall values from `Dataset2.xlsx`  
+- Fit **Lognormal** and **Gumbel** distributions  
+- Perform **Kolmogorov–Smirnov (KS) test**  
+- Select the best-fit distribution for each duration  
+- Generate IDF curves for:  
+  **2, 5, 10, 15, 30, 50 years**
 
+📈 **Output:**  
+`figures/IDF_Curves.png`
 
-2️⃣ Development of a Design Hyetograph
+---
 
-Design storm duration: 1.5 hours
+### **2️⃣ Development of a Design Hyetograph**
 
-Selected return period: T = 25 years
+- Design storm duration: **1.5 hours**  
+- Selected return period: **T = 25 years**  
+- Interpolated intensity from IDF results  
+- Compute total design rainfall depth  
+- Apply a **6-interval symmetric hyetograph pattern**
 
-Use IDF values → compute total depth
+📊 **Output:**  
+`figures/Hyetograph.png`
 
-Apply a 6-interval symmetric rainfall pattern
+---
 
+### **3️⃣ Basin-wise Peak Discharge (Rational Method)**  
 
-📊 Output Plot:
+For each basin:
+- Time of concentration using **Kerby’s equation**
+- Rainfall intensity from optimized IDF equation  
+- Weighted runoff coefficient:  
+  residential + lawn + paved  
+- Peak discharge:
 
-figures/Hyetograph.png
+\[
+Q = 0.00278 \, C \, I \, A
+\]
 
+All values stored in:  
+`Drainage_Design_Results.xlsx`
 
+---
 
-3️⃣ Basin-wise Peak Discharge (Rational Method)
-
-For every basin:
-
-Time of concentration via Kerby’s equation
-
-Intensity from optimized IDF equation
-
-Weighted runoff coefficient (Residential, Lawn, Paved)
-
-Peak discharge:
-
-𝑄 = 0.00278 * 𝐶 * 𝐼 * 𝐴
-
-
-Results stored in:
-
-Drainage_Design_Results.xlsx
-
-
-
-4️⃣ Pipe Sizing using Manning’s Formula
+### **4️⃣ Pipe Sizing using Manning’s Formula**
 
 For each pipe section:
-Q = 1/n * A * R^2/3 * S^1/2
 
-Diameters tested: 0.3 m – 1.25 m
+\[
+Q = \frac{1}{n} A R^{2/3} S^{1/2}
+\]
 
-Adopt smallest diameter satisfying required Q
+- Diameters tested: **0.30 m to 1.25 m**  
+- Smallest diameter satisfying required discharge chosen  
+- Capacity vs diameter plotted for all sections  
 
-Plot capacity vs diameter for each section
+📈 **Output:**  
+`figures/Manning_Capacity_vs_Diameter.png`
 
-📈 Output Plot:
+---
 
-figures/Manning_Capacity_vs_Diameter.png
+## 🛠 Software Requirements  
 
+To run the project:
 
-🛠 Software Requirements
+- Python 3.8+
+- NumPy  
+- Pandas  
+- SciPy  
+- Matplotlib  
+- OpenPyXL  
 
-Python 3.8+
-NumPy
-Pandas
-SciPy
-Matplotlib
-OpenPyXL (for Excel output) 
+---
 
+## ▶️ How to Run  
 
-▶️ How to Run
-
-Option 1 — Run in Google Colab
-Just upload all files and run CE462.ipynb
-
-Option 2 — Run Locally
-pip install numpy pandas scipy matplotlib openpyxl
-python ce462.py
-
-
-📄 Results Summary
-
-Complete IDF analysis and optimized IDF equation parameters
-Hyetograph for design storm
-Basin-wise runoff calculation
-Suitable pipe diameters for all sections using Manning's formula
-All results exported to Excel
+### **Option 1 — Run in Google Colab**
+Upload all files and run:
 
