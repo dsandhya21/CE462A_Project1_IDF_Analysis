@@ -68,11 +68,22 @@ Stored in:
 Q = \frac{1}{n} A R^{2/3} S^{1/2}
 \]
 
-📈 Output: `figures/Ma
+📈 Output: `figures/Manning_Capacity_vs_Diameter.png`
 
+---
 
+## 🛠 Software Requirements
+- Python 3.8+
+- NumPy  
+- Pandas  
+- SciPy  
+- Matplotlib  
+- OpenPyXL  
 
+---
 
+## ▶️ How to Run
 
-
+### Option 1 — Google Colab  
+Upload all files and run:
 
